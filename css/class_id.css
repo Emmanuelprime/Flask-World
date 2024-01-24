@@ -1,0 +1,13 @@
+.firstdiv{
+    color: red;
+}
+.seconddiv{
+    background-color: gray;
+}
+#single{
+    color: blue;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}

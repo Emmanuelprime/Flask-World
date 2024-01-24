@@ -1,0 +1,19 @@
+/* body{
+    /* background: gray; */
+    /* background: url(https://images.ctfassets.net/4cd45et68cgf/FJLXrcHViY5jAZYJLfXeg/22bb24c10cab4070c92806bbc8935379/Netflix_Games.png?w=2000); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+div{
+    background: blue;
+    border: orange;
+    border-width: thick;
+    border-style: solid;
+}
+
+p{
+    color: yellow;
+}
+span{
+    background: red;
+    color: black;
+}
