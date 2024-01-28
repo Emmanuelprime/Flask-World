@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to the page</h1>
+    <h1>The list of Schools Registered are:</h1>
+    <ol>
+        {% for school in schools%}
+        <li>{{school}}</li>
+        {% endfor %}
+    </ol>
+
+    {% if 'HGHS' in schools%}
+        <p>His grace High school has Registered</p>
+    
+    {%else%}
+        <p>His Grace high school has not Registered</p>
+
+    {% endif%}
+
+
+    
+</body>
+</html>
