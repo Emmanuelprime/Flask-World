@@ -1,7 +1,7 @@
 import os
 from flask import Flask
-
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 base_dir = os.path.abspath(os.path.dirname(__file__)) #directoty to store the db
 
@@ -12,6 +12,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False # we dont want to track eve
 
 db = SQLAlchemy(app)
 
+migrate = Migrate(app,db) # adding migration caps
+
+
 class Puppy(db.Model):
     __tablename__ = 'puppies' 
     
@@ -19,10 +22,12 @@ class Puppy(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
     age = db.Column(db.Integer)
+    breed = db.Column(db.text)
     
-    def __init__(self, name,age):
+    def __init__(self, name,age,breed):
         self.name = name
         self.age = age
+        self.breed = breed
     
     def __repr__(self):
         return f"Puppy {self.name} is {self.age} years old"
